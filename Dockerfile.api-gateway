@@ -14,7 +14,7 @@ COPY packages/ui/package.json ./packages/ui/
 
 # Install pnpm and dependencies
 RUN npm install -g pnpm
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --shamefully-hoist
 
 # Rebuild the source code only when needed
 FROM base AS builder
@@ -23,7 +23,7 @@ COPY . .
 
 # Build the application
 RUN npm install -g pnpm
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --shamefully-hoist
 RUN pnpm build --filter=@tillu/api-gateway
 
 # Production image, copy all the files and run the app

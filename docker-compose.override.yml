@@ -13,7 +13,7 @@ services:
       - ./apps/api-gateway:/app/apps/api-gateway
       - ./packages:/app/packages
       - /app/node_modules
-    command: ["npm", "run", "start:dev"]
+    command: ["node", "dist/src/main.js"]
 
   pos-terminal:
     environment:

@@ -36,7 +36,7 @@ export class InventoryItem {
   @Column('decimal', { precision: 10, scale: 2 })
   costPerUnit: number;
 
-  @Column()
+  @Column({ nullable: true })
   lastRestocked: Date;
 
   @Column({ nullable: true })
