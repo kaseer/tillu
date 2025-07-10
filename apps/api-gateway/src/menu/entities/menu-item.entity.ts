@@ -14,7 +14,7 @@ export class MenuItem {
   @Column('decimal', { precision: 10, scale: 2 })
   price: number;
 
-  @Column()
+  @Column({ nullable: true })
   category: string;
 
   @Column({ default: true })
