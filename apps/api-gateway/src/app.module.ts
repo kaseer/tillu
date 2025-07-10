@@ -13,6 +13,7 @@ import { AnalyticsModule } from './analytics/analytics.module';
 import { AiModule } from './ai/ai.module';
 import { BranchesModule } from './branches/branches.module';
 import { WebsocketModule } from './websocket/websocket.module';
+import { HealthModule } from './health/health.module';
 
 @Module({
   imports: [
@@ -41,6 +42,7 @@ import { WebsocketModule } from './websocket/websocket.module';
     AiModule,
     BranchesModule,
     WebsocketModule,
+    HealthModule,
   ],
 })
 export class AppModule {}
