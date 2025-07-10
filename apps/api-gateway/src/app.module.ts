@@ -27,7 +27,7 @@ import { WebsocketModule } from './websocket/websocket.module';
       password: process.env.DB_PASSWORD || 'tillu_password',
       database: process.env.DB_NAME || 'tillu_pos',
       autoLoadEntities: true,
-      synchronize: process.env.NODE_ENV !== 'production',
+      synchronize: false,
     }),
     AuthModule,
     OrdersModule,
