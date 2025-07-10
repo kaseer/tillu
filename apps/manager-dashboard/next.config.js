@@ -3,9 +3,6 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   transpilePackages: ['@tillu/shared', '@tillu/ui'],
-  experimental: {
-    appDir: true,
-  },
   output: 'standalone',
   images: {
     unoptimized: true,
