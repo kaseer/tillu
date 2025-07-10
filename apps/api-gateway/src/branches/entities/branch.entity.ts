@@ -8,13 +8,13 @@ export class Branch {
   @Column({ nullable: true })
   name: string;
 
-  @Column()
+  @Column({ nullable: true })
   address: string;
 
   @Column({ nullable: true })
   postcode: string;
 
-  @Column()
+  @Column({ nullable: true })
   phone: string;
 
   @Column('decimal', { precision: 10, scale: 8, nullable: true })
